@@ -1,0 +1,13 @@
+POST http://localhost:3000
+Content-Type: application/json
+
+{
+    "id":2,
+    "nombre": "Usuario Nuevo",
+    "edad": 25,
+    "correo": "nuevo@ejemplo.com"
+}
+
+###
+
+GET http://localhost:3000

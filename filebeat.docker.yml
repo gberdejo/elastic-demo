@@ -1,0 +1,21 @@
+filebeat.inputs:
+
+# Each - is an input. Most options can be set at the input level, so
+# you can use different inputs for various configurations.
+# Below are the input specific configurations.
+
+- type: log
+
+  # Change to true to enable this input configuration.
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /var/logs/log.json
+  json.keys_under_root: true
+  json.overwrite_keys: true
+  json.add_error_key: true
+  json.expand_keys: true
+# =============================== Elastic Cloud ================================
+cloud.id: eac7cc2ae0584ff780be842601cafc73:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ1NmU3M2YyYTdjOWI0NTRlYTUyY2ViZDQzNDgyYTc4ZSRiNGY5YWY4M2JmMzQ0YjUwYjI3M2ExYjZmMGEyNjUzMA== 
+cloud.auth: elastic:nRYnykBPbHIfxNlLlAs0X3Xk 

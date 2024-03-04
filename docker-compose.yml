@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  filebeat:
+    build:
+      context: .
+    container_name: filebeat-elastic-demo-2
+    user: root
+    volumes:
+      - ./logs:/var/logs
+      - ./filebeat.docker.yml:/usr/share/filebeat/filebeat.docker.yml:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+
